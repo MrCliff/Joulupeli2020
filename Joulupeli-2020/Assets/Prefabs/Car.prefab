@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 289379088621410044}
   - component: {fileID: 289379088621410046}
   - component: {fileID: 289379088621410047}
+  - component: {fileID: 845088119}
+  - component: {fileID: 8177930081166470206}
+  - component: {fileID: 4639425975214496603}
+  - component: {fileID: 845088120}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -96,15 +100,189 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 50
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &845088119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289379088621409920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 11231331cafd0f94da92d21de20c8ac8,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 845088120}
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 93cfe673-3d79-432f-b613-130c318052bc
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5fb9651a-c6d6-4fa2-bd6d-3e5e67b7bd17
+    m_ActionName: Player/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 86840ceb-aea7-4220-b1dd-b298cb5240f3
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4315f25a-97f0-4780-8c61-298b4859b19e
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d113038a-f484-4b2b-adff-db5dd437ff81
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 850e591e-8d1c-4123-aaea-ebcadfe13c93
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 60ac0223-8537-4cc1-9fac-54df13e413cd
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ccf8b238-578a-48df-8d0e-5359ce58c547
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8e8b07e7-3b43-4b77-8041-800c40781cd9
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7c95a688-c6be-4bdd-9724-1fdd9c61f3f0
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 830e6e66-6aca-4353-8b4a-4aac2108354e
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bccb9ae8-d2ff-4924-b47c-a4b2e42e3a34
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e07ac205-c9eb-4e75-8913-dc86c78189ec
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 845088120}
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: cd160735-ec94-45a9-b8f9-efa6db57fa48
+    m_ActionName: Player/Jump[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!235 &8177930081166470206
+WheelJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289379088621409920}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 289379088453758142}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0.992, y: -1.299}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Suspension:
+    m_DampingRatio: 0.7
+    m_Frequency: 10
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+--- !u!235 &4639425975214496603
+WheelJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289379088621409920}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 4152981437910583982}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: -1.98, y: -1.197}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Suspension:
+    m_DampingRatio: 0.7
+    m_Frequency: 10
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+--- !u!114 &845088120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289379088621409920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86836de2fe523a84d87b10915e0cd12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frontWheel: {fileID: 8177930081166470206}
+  rearWheel: {fileID: 4639425975214496603}
+  moveThreshold: 0.103
+  motorSpeed: 300
+  jumpForceMagnitude: 20
 --- !u!1001 &289379088063762549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -126,6 +304,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -1.197
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442323990652132059, guid: 2933e2104316e72499ad50572474dcab,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4442323990652132132, guid: 2933e2104316e72499ad50572474dcab,
         type: 3}
@@ -197,11 +380,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rear Tire
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4442323990652132058, guid: 2933e2104316e72499ad50572474dcab, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2933e2104316e72499ad50572474dcab, type: 3}
 --- !u!4 &4152981437910584145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4442323990652132132, guid: 2933e2104316e72499ad50572474dcab,
+    type: 3}
+  m_PrefabInstance: {fileID: 289379088063762549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &4152981437910583982 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4442323990652132059, guid: 2933e2104316e72499ad50572474dcab,
     type: 3}
   m_PrefabInstance: {fileID: 289379088063762549}
   m_PrefabAsset: {fileID: 0}
@@ -226,6 +416,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -1.299
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442323990652132059, guid: 2933e2104316e72499ad50572474dcab,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4442323990652132132, guid: 2933e2104316e72499ad50572474dcab,
         type: 3}
@@ -302,11 +497,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Front Tire
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4442323990652132058, guid: 2933e2104316e72499ad50572474dcab, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2933e2104316e72499ad50572474dcab, type: 3}
 --- !u!4 &289379088453758273 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4442323990652132132, guid: 2933e2104316e72499ad50572474dcab,
+    type: 3}
+  m_PrefabInstance: {fileID: 4152981438837454437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &289379088453758142 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4442323990652132059, guid: 2933e2104316e72499ad50572474dcab,
     type: 3}
   m_PrefabInstance: {fileID: 4152981438837454437}
   m_PrefabAsset: {fileID: 0}
