@@ -240,6 +240,11 @@ PrefabInstance:
       propertyPath: motorSpeed
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 289379088453758272, guid: bc3561d69e056cd4abb029fb68dbbd6b,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6280fa769be6a5e479d660c874dce975, type: 2}
     - target: {fileID: 289379088621409920, guid: bc3561d69e056cd4abb029fb68dbbd6b,
         type: 3}
       propertyPath: m_Name
@@ -300,6 +305,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4152981437910584144, guid: bc3561d69e056cd4abb029fb68dbbd6b,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6280fa769be6a5e479d660c874dce975, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc3561d69e056cd4abb029fb68dbbd6b, type: 3}
 --- !u!1001 &5636779122220634898
@@ -364,6 +374,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5636779122651207708, guid: c160e9bc22cb1354c9b3f047953d2582,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5bf4405a8d1445d4eb3747a7e582fb11, type: 2}
     - target: {fileID: 5636779122651207711, guid: c160e9bc22cb1354c9b3f047953d2582,
         type: 3}
       propertyPath: m_Name
