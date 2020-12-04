@@ -318,15 +318,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 845088120, guid: bc3561d69e056cd4abb029fb68dbbd6b, type: 3}
-      propertyPath: motorSpeed
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 289379088453758272, guid: bc3561d69e056cd4abb029fb68dbbd6b,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 6280fa769be6a5e479d660c874dce975, type: 2}
     - target: {fileID: 289379088621409920, guid: bc3561d69e056cd4abb029fb68dbbd6b,
         type: 3}
       propertyPath: m_Name
@@ -386,26 +377,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 289379088621410047, guid: bc3561d69e056cd4abb029fb68dbbd6b,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 289379088621410047, guid: bc3561d69e056cd4abb029fb68dbbd6b,
-        type: 3}
-      propertyPath: m_Mass
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4152981437910584144, guid: bc3561d69e056cd4abb029fb68dbbd6b,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 6280fa769be6a5e479d660c874dce975, type: 2}
-    - target: {fileID: 8177930081166470206, guid: bc3561d69e056cd4abb029fb68dbbd6b,
-        type: 3}
-      propertyPath: m_Motor.m_MaximumMotorForce
-      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc3561d69e056cd4abb029fb68dbbd6b, type: 3}
