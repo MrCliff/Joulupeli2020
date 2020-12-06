@@ -15,9 +15,11 @@ GameObject:
   - component: {fileID: 8177930081166470206}
   - component: {fileID: 4639425975214496603}
   - component: {fileID: 845088120}
+  - component: {fileID: 467365084}
+  - component: {fileID: 1058438167282043768}
   m_Layer: 0
   m_Name: Car
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +104,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 30
   m_LinearDrag: 0
-  m_AngularDrag: 500
+  m_AngularDrag: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -283,6 +285,38 @@ MonoBehaviour:
   moveThreshold: 0.103
   motorSpeed: 2000
   jumpForceMagnitude: 20
+--- !u!70 &467365084
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289379088621409920}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 684a091b6b88f7442b5aa9315c3d6670, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00536708, y: -0.32716408}
+  m_Size: {x: 4.9033976, y: 1.1276768}
+  m_Direction: 1
+--- !u!70 &1058438167282043768
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289379088621409920}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 684a091b6b88f7442b5aa9315c3d6670, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.51487154, y: 0.1769903}
+  m_Size: {x: 3.2514832, y: 1.8564941}
+  m_Direction: 1
 --- !u!1001 &289379088063762549
 PrefabInstance:
   m_ObjectHideFlags: 0

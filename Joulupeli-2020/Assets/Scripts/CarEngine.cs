@@ -56,5 +56,15 @@ namespace Assets.Scripts
             frontWheel.attachedRigidbody.AddForce(jumpForce, ForceMode2D.Impulse);
             rearWheel.attachedRigidbody.AddForce(jumpForce, ForceMode2D.Impulse);
         }
+
+        /// <summary>
+        /// "Pulls handbrake" i.e. doesn't let the rear wheel rotate, when
+        /// activateBrakes is true.
+        /// </summary>
+        /// <param name="activateBrakes">True activates the brakes, false deactivates them.</param>
+        public void PullHandbrake(bool activateBrakes)
+        {
+            rearWheel.connectedBody.freezeRotation = activateBrakes;
+        }
     }
 }
