@@ -13,8 +13,6 @@ namespace Assets.Scripts
     [RequireComponent(typeof(Collider2D))]
     public class Goal : MonoBehaviour
     {
-        private const string PlayerTag = "Player";
-
         private Collider2D goalTrigger;
         private GameController gameController;
 
@@ -26,7 +24,7 @@ namespace Assets.Scripts
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.tag == PlayerTag)
+            if (collision.tag == GameController.PlayerTag)
             {
                 gameController.EndGameAsVictorious();
             }

@@ -13,6 +13,7 @@ namespace Assets.Scripts
     /// </summary>
     public class GameController : MonoBehaviour
     {
+        public const string PlayerTag = "Player";
         public const string GameControllerTag = "GameController";
 
         private const string ActionMapPlayer = "Player";

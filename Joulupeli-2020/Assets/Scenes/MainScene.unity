@@ -657,6 +657,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3450605794676417468, guid: dd953d1bc73266c4c82bbd0fb11ebc36,
         type: 3}
+      propertyPath: m_Points.Array.data[377].x
+      value: -8.452534
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450605794676417468, guid: dd953d1bc73266c4c82bbd0fb11ebc36,
+        type: 3}
+      propertyPath: m_Points.Array.data[377].y
+      value: 0.35795608
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450605794676417468, guid: dd953d1bc73266c4c82bbd0fb11ebc36,
+        type: 3}
+      propertyPath: m_Points.Array.data[378].x
+      value: -8.452534
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450605794676417468, guid: dd953d1bc73266c4c82bbd0fb11ebc36,
+        type: 3}
+      propertyPath: m_Points.Array.data[378].y
+      value: 0.35795608
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450605794676417468, guid: dd953d1bc73266c4c82bbd0fb11ebc36,
+        type: 3}
       propertyPath: m_Points.Array.data[235].x
       value: 904.9473
       objectReference: {fileID: 0}
@@ -2075,26 +2095,6 @@ PrefabInstance:
       propertyPath: m_Points.Array.data[376].y
       value: 0.35795608
       objectReference: {fileID: 0}
-    - target: {fileID: 3450605794676417468, guid: dd953d1bc73266c4c82bbd0fb11ebc36,
-        type: 3}
-      propertyPath: m_Points.Array.data[377].x
-      value: -8.452534
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450605794676417468, guid: dd953d1bc73266c4c82bbd0fb11ebc36,
-        type: 3}
-      propertyPath: m_Points.Array.data[377].y
-      value: 0.35795608
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450605794676417468, guid: dd953d1bc73266c4c82bbd0fb11ebc36,
-        type: 3}
-      propertyPath: m_Points.Array.data[378].x
-      value: -8.452534
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450605794676417468, guid: dd953d1bc73266c4c82bbd0fb11ebc36,
-        type: 3}
-      propertyPath: m_Points.Array.data[378].y
-      value: 0.35795608
-      objectReference: {fileID: 0}
     - target: {fileID: 3450605794676417469, guid: dd953d1bc73266c4c82bbd0fb11ebc36,
         type: 3}
       propertyPath: m_Spline.m_ControlPoints.Array.size
@@ -2394,6 +2394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207409443427842995, guid: dd953d1bc73266c4c82bbd0fb11ebc36,
+        type: 3}
+      propertyPath: hazardCount
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd953d1bc73266c4c82bbd0fb11ebc36, type: 3}
