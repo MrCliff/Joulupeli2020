@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
@@ -18,6 +19,9 @@ namespace Assets.Scripts
 
         private const string ActionMapPlayer = "Player";
         private const string ActionMapUI = "UI";
+
+        private const string ActionPoint = "Point";
+        private const string ActionClick = "Click";
 
         [SerializeField]
         private GameObject startGamePanel;
@@ -34,10 +38,13 @@ namespace Assets.Scripts
         [SerializeField]
         private CarEngine carEngine;
 
+        [SerializeField]
+        private InputSystemUIInputModule inputModule;
+
         private void Start()
         {
             DeactivateAllPanels();
-            playerInput.SwitchCurrentActionMap(ActionMapUI);
+            SwitchActionMapTo(ActionMapUI);
             startGamePanel.SetActive(true);
             carEngine.PullHandbrake(true);
         }
@@ -47,7 +54,7 @@ namespace Assets.Scripts
         /// </summary>
         public void EndGameAsVictorious()
         {
-            playerInput.SwitchCurrentActionMap(ActionMapUI);
+            SwitchActionMapTo(ActionMapUI);
             victoryPanel.SetActive(true);
             carEngine.PullHandbrake(true);
         }
@@ -57,7 +64,7 @@ namespace Assets.Scripts
         /// </summary>
         public void EndGameAsFailure()
         {
-            playerInput.SwitchCurrentActionMap(ActionMapUI);
+            SwitchActionMapTo(ActionMapUI);
             gameOverPanel.SetActive(true);
             carEngine.PullHandbrake(true);
         }
@@ -65,7 +72,7 @@ namespace Assets.Scripts
         public void StartGame()
         {
             DeactivateAllPanels();
-            playerInput.SwitchCurrentActionMap(ActionMapPlayer);
+            SwitchActionMapTo(ActionMapPlayer);
             carEngine.PullHandbrake(false);
         }
 
@@ -79,6 +86,15 @@ namespace Assets.Scripts
         {
             Debug.Log("Quitting the game...");
             Application.Quit();
+        }
+
+        private void SwitchActionMapTo(string actionMapName)
+        {
+            playerInput.SwitchCurrentActionMap(actionMapName);
+            InputAction pointAction = inputModule.actionsAsset.FindActionMap(actionMapName).FindAction(ActionPoint);
+            inputModule.point = InputActionReference.Create(pointAction);
+            InputAction clickAction = inputModule.actionsAsset.FindActionMap(actionMapName).FindAction(ActionClick);
+            inputModule.leftClick = InputActionReference.Create(clickAction);
         }
 
         /// <summary>
