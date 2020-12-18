@@ -17,6 +17,8 @@ namespace Assets.Scripts
         public const string PlayerTag = "Player";
         public const string GameControllerTag = "GameController";
 
+        private const string ControlSchemeTouch = "TouchGamepad";
+
         private const string ActionMapPlayer = "Player";
         private const string ActionMapUI = "UI";
 
@@ -33,6 +35,9 @@ namespace Assets.Scripts
         private GameObject gameOverPanel;
 
         [SerializeField]
+        private GameObject touchInputPanel;
+
+        [SerializeField]
         private PlayerInput playerInput;
 
         [SerializeField]
@@ -47,6 +52,21 @@ namespace Assets.Scripts
             SwitchActionMapTo(ActionMapUI);
             startGamePanel.SetActive(true);
             carEngine.PullHandbrake(true);
+
+
+            Debug.Log("Current input devices " + string.Join(", ", InputSystem.devices));
+            playerInput.onControlsChanged += input => Debug.Log("New controls are " + input.currentControlScheme);
+            //if (Touchscreen.current != null)
+            //{
+            //    Debug.Log("Touchscreen active!");
+            //    ActivateOnScreenInputs();
+            //}
+            ActivateOnScreenInputsIfPossible();
+
+            //InputDevice[] devices = new InputDevice[] { Gamepad.current, Keyboard.current, Mouse.current, Touchscreen.current }
+            //    .Where(dev => dev != null)
+            //    .ToArray();
+            //playerInput.SwitchCurrentControlScheme(devices);
         }
 
         /// <summary>
@@ -95,6 +115,20 @@ namespace Assets.Scripts
             inputModule.point = InputActionReference.Create(pointAction);
             InputAction clickAction = inputModule.actionsAsset.FindActionMap(actionMapName).FindAction(ActionClick);
             inputModule.leftClick = InputActionReference.Create(clickAction);
+        }
+
+        public void ActivateOnScreenInputsIfPossible()
+        {
+            if (Gamepad.current == null || Touchscreen.current == null)
+            {
+                touchInputPanel.SetActive(false);
+                return;
+            }
+
+            touchInputPanel.SetActive(true);
+            InputDevice[] devices = { Gamepad.current, Touchscreen.current };
+            Debug.Log($"Switching input control scheme to {ControlSchemeTouch} with devices " + string.Join<InputDevice>(", ", devices));
+            playerInput.SwitchCurrentControlScheme(ControlSchemeTouch, devices);
         }
 
         /// <summary>

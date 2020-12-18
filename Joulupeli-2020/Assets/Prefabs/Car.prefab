@@ -207,8 +207,16 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cd160735-ec94-45a9-b8f9-efa6db57fa48
     m_ActionName: Player/Jump[/Keyboard/space]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard&Mouse
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 544342f9-16c1-4260-8158-00c4cf069879
+    m_ActionName: Player/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c62251a3-5940-480b-bb1a-a217d28f8f0c
+    m_ActionName: Player/Point[/Mouse/position]
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: TouchGamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

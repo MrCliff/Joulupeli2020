@@ -20,11 +20,13 @@ namespace Assets.Scripts
 
         public void OnPointerUp(PointerEventData eventData)
         {
+            Debug.Log("Pointer up! " + eventData.button);
             SendValueToControl(0.0f);
         }
 
         public void OnPointerDown(PointerEventData eventData)
         {
+            Debug.Log("Pointer down! " + eventData.button);
             SendValueToControl(isPositive ? 1.0f : -1.0f);
         }
 

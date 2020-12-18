@@ -25,7 +25,7 @@ PrefabInstance:
     - target: {fileID: 5206944279399616882, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5206944280054494945, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
@@ -114,7 +114,7 @@ PrefabInstance:
     - target: {fileID: 5206944280918179689, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5206944280918179689, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
@@ -164,7 +164,7 @@ PrefabInstance:
     - target: {fileID: 5206944280918179690, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
       propertyPath: m_Name
-      value: Start Game Panel Variant
+      value: Start Game Panel
       objectReference: {fileID: 0}
     - target: {fileID: 5206944281039787607, guid: c9c9079281add034d8619204afbc7415,
         type: 3}

@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5206944280054494945, guid: c9c9079281add034d8619204afbc7415,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
     - target: {fileID: 5206944280896319210, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
       propertyPath: m_Text
@@ -70,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 5206944280918179689, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5206944280918179689, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
@@ -120,7 +125,12 @@ PrefabInstance:
     - target: {fileID: 5206944280918179690, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
       propertyPath: m_Name
-      value: Victory Panel Variant
+      value: Victory Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206944280918179690, guid: c9c9079281add034d8619204afbc7415,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5206944281039787607, guid: c9c9079281add034d8619204afbc7415,
         type: 3}

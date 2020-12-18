@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5206944280054494945, guid: c9c9079281add034d8619204afbc7415,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
     - target: {fileID: 5206944280794635928, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
       propertyPath: m_IsActive
@@ -76,7 +81,7 @@ PrefabInstance:
     - target: {fileID: 5206944280918179689, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5206944280918179689, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
@@ -126,12 +131,32 @@ PrefabInstance:
     - target: {fileID: 5206944280918179690, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
       propertyPath: m_Name
-      value: Game Over Panel Variant
+      value: Game Over Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206944280918179690, guid: c9c9079281add034d8619204afbc7415,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5206944281039787607, guid: c9c9079281add034d8619204afbc7415,
         type: 3}
       propertyPath: m_Text
       value: "H\xE4visit pelin!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206944281039787607, guid: c9c9079281add034d8619204afbc7415,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206944281039787607, guid: c9c9079281add034d8619204afbc7415,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.92551905
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206944281039787607, guid: c9c9079281add034d8619204afbc7415,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9c9079281add034d8619204afbc7415, type: 3}
