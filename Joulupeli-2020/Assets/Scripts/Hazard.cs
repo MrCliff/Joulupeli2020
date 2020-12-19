@@ -16,7 +16,7 @@ namespace Assets.Scripts
         {
             if (collision.gameObject.tag == GameController.PlayerTag)
             {
-                GameController.GetInstance().EndGameAsFailure();
+                GameController.FindInstance().EndGameAsFailure();
             }
         }
     }

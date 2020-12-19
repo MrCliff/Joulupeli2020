@@ -46,8 +46,14 @@ namespace Assets.Scripts
         [SerializeField]
         private InputSystemUIInputModule inputModule;
 
+        private GameMemory gameMemory;
+
+        private bool gameEnded = false;
+
         private void Start()
         {
+            gameMemory = GameMemory.Instance;
+
             DeactivateAllPanels();
             SwitchActionMapTo(ActionMapUI);
             startGamePanel.SetActive(true);
@@ -74,6 +80,11 @@ namespace Assets.Scripts
         /// </summary>
         public void EndGameAsVictorious()
         {
+            if (gameEnded) return;
+            gameEnded = true;
+
+            gameMemory.ResetGameFailedInRowCount();
+
             SwitchActionMapTo(ActionMapUI);
             victoryPanel.SetActive(true);
             carEngine.PullHandbrake(true);
@@ -84,6 +95,11 @@ namespace Assets.Scripts
         /// </summary>
         public void EndGameAsFailure()
         {
+            if (gameEnded) return;
+            gameEnded = true;
+
+            gameMemory.IncrementGameFailedInRowCount();
+
             SwitchActionMapTo(ActionMapUI);
             gameOverPanel.SetActive(true);
             carEngine.PullHandbrake(true);
@@ -151,7 +167,7 @@ namespace Assets.Scripts
         /// Returns the currently active GameController.
         /// </summary>
         /// <returns></returns>
-        public static GameController GetInstance()
+        public static GameController FindInstance()
         {
             return GameObject.FindWithTag(GameControllerTag).GetComponent<GameController>();
         }

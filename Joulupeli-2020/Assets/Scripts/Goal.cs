@@ -19,7 +19,7 @@ namespace Assets.Scripts
         private void Awake()
         {
             goalTrigger = GetComponent<Collider2D>();
-            gameController = GameController.GetInstance();
+            gameController = GameController.FindInstance();
         }
 
         private void OnTriggerEnter2D(Collider2D collision)

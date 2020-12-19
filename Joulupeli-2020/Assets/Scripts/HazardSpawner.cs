@@ -22,7 +22,7 @@ namespace Assets.Scripts
 
         [SerializeField]
         [Min(0)]
-        private int hazardCount;
+        private int[] hazardCounts;
 
         [SerializeField]
         private GameObject[] hazards;
@@ -31,12 +31,14 @@ namespace Assets.Scripts
         private float hazardHeightFromGround = 1f;
 
         private IEnumerable<Vector2> spawnPointsOnEditor;
+        private GameMemory gameMemory;
 
         //[SerializeField]
         //private EdgeCollider2D spawnArea;
 
         private void Start()
         {
+            gameMemory = GameMemory.Instance;
             Spawn();
         }
 
@@ -47,7 +49,7 @@ namespace Assets.Scripts
                 Gizmos.color = Color.red;
                 Gizmos.DrawLine(spawnAreaStart.position, spawnAreaEnd.position);
 
-                if (spawnPointsOnEditor == null) spawnPointsOnEditor = GenerateSpawnPoints();
+                if (spawnPointsOnEditor == null) spawnPointsOnEditor = GenerateSpawnPoints(hazardCounts.Length > 0 ? hazardCounts[0] : 0);
                 foreach (Vector2 spawnPoint in spawnPointsOnEditor)
                 {
                     Gizmos.DrawSphere(spawnPoint, 1f);
@@ -57,7 +59,14 @@ namespace Assets.Scripts
 
         private void Spawn()
         {
-            foreach (Vector2 spawnPoint in GenerateSpawnPoints())
+            int count = 0;
+            if (hazardCounts.Length > 0)
+            {
+                count = hazardCounts[Mathf.Clamp(gameMemory.GameFailedInRowCount, 0, hazardCounts.Length - 1)];
+            }
+
+            Debug.Log($"Spawning {count} hazards.");
+            foreach (Vector2 spawnPoint in GenerateSpawnPoints(count))
             {
                 GameObject objectToSpawn = hazards[Random.Range(0, hazards.Length - 1)];
                 Instantiate(objectToSpawn, spawnPoint, Quaternion.identity);
@@ -67,15 +76,15 @@ namespace Assets.Scripts
             //spriteShapeController.edgeCollider
         }
 
-        private IEnumerable<Vector2> GenerateSpawnPoints()
+        private IEnumerable<Vector2> GenerateSpawnPoints(int count)
         {
             Vector2 startPoint = spawnAreaStart.position;
             Vector2 endPoint = spawnAreaEnd.position;
             Vector2 spawnLine = endPoint - startPoint;
             float spawnAreaLength = spawnLine.magnitude;
 
-            IList<Vector2> spawnPoints = new List<Vector2>(hazardCount);
-            for (int i = 0; i < hazardCount; i++)
+            IList<Vector2> spawnPoints = new List<Vector2>(count);
+            for (int i = 0; i < count; i++)
             {
                 float t = Random.Range(0, spawnAreaLength);
                 Vector2 raycastOrigin = startPoint + (spawnLine.normalized * t);
