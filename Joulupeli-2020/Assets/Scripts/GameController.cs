@@ -59,20 +59,9 @@ namespace Assets.Scripts
             startGamePanel.SetActive(true);
             carEngine.PullHandbrake(true);
 
-
             Debug.Log("Current input devices " + string.Join(", ", InputSystem.devices));
             playerInput.onControlsChanged += input => Debug.Log("New controls are " + input.currentControlScheme);
-            //if (Touchscreen.current != null)
-            //{
-            //    Debug.Log("Touchscreen active!");
-            //    ActivateOnScreenInputs();
-            //}
             ActivateOnScreenInputsIfPossible();
-
-            //InputDevice[] devices = new InputDevice[] { Gamepad.current, Keyboard.current, Mouse.current, Touchscreen.current }
-            //    .Where(dev => dev != null)
-            //    .ToArray();
-            //playerInput.SwitchCurrentControlScheme(devices);
         }
 
         /// <summary>
